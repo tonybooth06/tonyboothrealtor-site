@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tony Booth | Miami Condos</title>
+<meta name="description" content="Miami condos Tony Booth is touring this month, from Miami Beach to Sunny Isles. Big International Realty.">
+<meta property="og:title" content="Tony Booth | Miami Condos">
+<meta property="og:description" content="Miami condos from Miami Beach to Sunny Isles, with photos, prices and building numbers.">
+<meta property="og:image" content="https://tonyboothrealtor.com/setai-0.jpg">
+<meta property="og:url" content="https://tonyboothrealtor.com/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E6670'/%3E%3Ctext x='16' y='21.5' font-size='14' font-weight='700' text-anchor='middle' fill='white' font-family='Arial'%3ETB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#ffffff; --ink:#16212c; --muted:#5d6873; --soft:#f1f4f5; --line:#dfe4e7;
+  --sea:#0e6670; --sea-ink:#ffffff; --sea-tint:#e3f0f0;
+  --font:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --wrap:1120px; --gut:20px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--font);font-feature-settings:"tnum" 0}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 max(var(--gut),env(safe-area-inset-left)) 0 max(var(--gut),env(safe-area-inset-right))}
+.num{font-variant-numeric:tabular-nums}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.who{display:flex;flex-direction:column;line-height:1.2;text-decoration:none}
+.who b{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.who span{font-size:13px;color:var(--muted)}
+.bar nav{display:flex;gap:6px;align-items:center}
+.bar nav a{font-size:14px;font-weight:500;text-decoration:none;padding:8px 12px;border-radius:8px}
+.bar nav a:hover{background:var(--soft)}
+.bar nav a.cta{background:var(--ink);color:#fff}
+.bar nav a.cta:hover{background:#2a3744}
+@media(max-width:620px){.bar nav a.hide-s{display:none}}
+
+/* intro */
+.intro{padding:40px 0 28px}
+.intro .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:end}
+@media(min-width:900px){.intro .wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px}}
+h1{margin:0;font-weight:600;font-size:clamp(36px,6.4vw,60px);line-height:1.02;letter-spacing:-.03em;max-width:12ch}
+.intro p{margin:16px 0 0;font-size:18px;color:var(--muted);max-width:44ch}
+.intro .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:10px;font:600 15px var(--font);text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn.solid{background:var(--sea);color:var(--sea-ink)}
+.btn.solid:hover{background:#0b5560}
+.btn.quiet{background:var(--paper);color:var(--ink);border-color:var(--line)}
+.btn.quiet:hover{border-color:#b9c2c8}
+.lead-photo{margin:0;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:var(--soft)}
+.lead-photo img{width:100%;height:100%;object-fit:cover}
+.lead-photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.95);color:var(--ink);font-size:13px;font-weight:500;padding:7px 11px;border-radius:8px}
+
+/* filters */
+.filters{position:sticky;top:61px;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+.filters .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.filters .wrap::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:500 14px var(--font);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 15px;cursor:pointer}
+.chip span{color:var(--muted);margin-left:4px}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip[aria-pressed="true"] span{color:#c7cfd5}
+
+/* listings */
+.listings{padding:8px 0 24px}
+.home{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding:32px 0;border-bottom:1px solid var(--line)}
+.gallery,.facts{min-width:0}
+.home:last-child{border-bottom:0}
+@media(min-width:900px){.home{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:start;padding:44px 0}}
+.home[hidden]{display:none}
+
+.frame{position:relative}
+.strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:12px;background:var(--soft);aspect-ratio:3/2;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.count{position:absolute;right:12px;bottom:12px;background:rgba(22,33,44,.78);color:#fff;font-size:13px;font-weight:500;padding:5px 10px;border-radius:999px}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.95);color:var(--ink);font:600 20px/1 var(--font);cursor:pointer;display:none;box-shadow:0 2px 10px rgba(22,33,44,.18)}
+.nav.prev{left:12px}.nav.next{right:12px}
+@media(hover:hover) and (min-width:700px){.nav{display:grid;place-items:center}}
+.thumbs{display:flex;gap:6px;margin-top:8px;overflow-x:auto;scrollbar-width:none}
+.thumbs::-webkit-scrollbar{display:none}
+.thumbs button{flex:0 0 auto;width:64px;height:44px;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;background:var(--soft);opacity:.7}
+.thumbs button[aria-current="true"]{border-color:var(--ink);opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+
+.facts{display:flex;flex-direction:column;gap:14px}
+.where{font-size:14px;color:var(--muted)}
+.price{font-size:clamp(30px,4vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.name{font-size:20px;font-weight:600;letter-spacing:-.01em;margin-top:-6px}
+.spec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.spec div{padding:12px 14px;border-left:1px solid var(--line)}
+.spec div:first-child{border-left:0}
+.spec b{display:block;font-size:19px;font-weight:600}
+.spec span{font-size:13px;color:var(--muted)}
+.more{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
+.more dt{color:var(--muted)}
+.more dd{margin:0}
+
+.value{background:var(--soft);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.value .head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px}
+.value .head b{font-weight:600}
+.badge{font-size:13px;font-weight:600;color:var(--sea);background:var(--sea-tint);padding:4px 9px;border-radius:999px;white-space:nowrap}
+.row{display:grid;grid-template-columns:118px 1fr auto;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.track{height:8px;border-radius:999px;background:#dde3e6;overflow:hidden}
+.track i{display:block;height:100%;border-radius:999px;background:#8a959e}
+.row.ask .track i{background:var(--sea)}
+.row b{color:var(--ink);font-weight:600;font-size:14px}
+.value p{margin:0;font-size:12.5px;color:var(--muted)}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.tags li{font-size:13.5px;padding:6px 11px;border-radius:999px;background:var(--soft)}
+.do{display:flex;flex-wrap:wrap;gap:8px}
+.credit{font-size:13px;color:var(--muted);margin:0}
+
+/* buildings */
+.section{padding:56px 0;border-top:1px solid var(--line)}
+h2{margin:0;font-size:clamp(26px,3.6vw,34px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.section .sub{margin:10px 0 0;color:var(--muted);max-width:60ch}
+.tbl{margin-top:24px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-size:13px;font-weight:500;color:var(--muted);background:var(--soft);white-space:nowrap}
+th button{all:unset;cursor:pointer}
+th button:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+th[aria-sort] button::after{content:" ↓";color:var(--ink)}
+th[aria-sort="ascending"] button::after{content:" ↑"}
+td.r,th.r{text-align:right}
+td small{display:block;color:var(--muted);font-size:13px}
+@media(max-width:700px){
+  table,thead,tbody,tr,td{display:block}
+  thead{display:none}
+  tr{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 12px}
+  tr:last-child{border-bottom:0}
+  td{padding:0;border:0}
+  td.r{text-align:right}
+  td.hide-s{display:none}
+}
+.src{font-size:13px;color:var(--muted);margin:14px 0 0;max-width:80ch}
+
+/* contact */
+.contact .wrap{display:grid;gap:24px}
+@media(min-width:900px){.contact .wrap{grid-template-columns:5fr 7fr;gap:48px;align-items:start}}
+.ways{display:grid;gap:10px}
+.way{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 18px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+.way:hover{border-color:#b9c2c8}
+.way b{display:block;font-weight:600;font-size:17px}
+.way span{color:var(--muted);font-size:14px}
+.way em{font-style:normal;font-size:14px;font-weight:600;color:var(--sea);white-space:nowrap}
+.note{font-size:14px;color:var(--muted);margin:0}
+
+footer{background:var(--soft);padding:36px 0 calc(36px + env(safe-area-inset-bottom));font-size:13.5px;color:var(--muted)}
+footer p{margin:0 0 10px;max-width:80ch}
+footer strong{color:var(--ink);font-weight:600}
+@media(prefers-reduced-motion:reduce){.strip{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="who" href="#top" aria-label="Tony Booth, Big International Realty, back to top"><b>Tony Booth</b><span>Big International Realty</span></a>
+    <nav aria-label="Page">
+      <a class="hide-s" href="#homes">Homes</a>
+      <a class="hide-s" href="#buildings">Buildings</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="wrap">
+      <div>
+        <h1 id="intro-title">Miami condos I'm touring this month</h1>
+        <p>From Miami Beach to Sunny Isles. Every home here is shared with the listing agent's permission, with real photos, prices and what the building has sold for.</p>
+        <div class="actions">
+          <a class="btn solid" href="#homes">See the homes</a>
+          <a class="btn quiet" href="#contact">Ask me about a building</a>
+        </div>
+      </div>
+      <figure class="lead-photo">
+        <img src="setai-1.jpg" alt="Miami Beach from above The Setai, looking north along the ocean" fetchpriority="high">
+        <figcaption>The Setai, Miami Beach</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="filters" id="homes" role="group" aria-label="Filter homes by area">
+    <div class="wrap" id="chips"></div>
+  </div>
+
+  <section class="listings" aria-label="Homes">
+    <div class="wrap" id="list"></div>
+  </section>
+
+  <section class="section" id="buildings" aria-labelledby="b-title">
+    <div class="wrap">
+      <h2 id="b-title">What buildings actually sell for</h2>
+      <p class="sub">Recorded sales in ten Downtown, Edgewater and Brickell towers, so you can tell a fair price from a high one. Tap a column to sort.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr>
+            <th scope="col"><button type="button" data-k="name">Building</button></th>
+            <th scope="col" class="r" aria-sort="ascending"><button type="button" data-k="ppsf">Per sq ft</button></th>
+            <th scope="col" class="r"><button type="button" data-k="med">Median sale</button></th>
+            <th scope="col" class="r"><button type="button" data-k="built">Built</button></th>
+            <th scope="col" class="r"><button type="button" data-k="sales">Sales</button></th>
+          </tr></thead>
+          <tbody id="btable"></tbody>
+        </table>
+      </div>
+      <p class="src">Qualified sales in the Florida Department of Revenue's 2026 Miami-Dade sales file, January 2025 to April 2026, retrieved October 21, 2026. Public records can be incomplete or late.</p>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="c-title">
+    <div class="wrap">
+      <div>
+        <h2 id="c-title">Want to see one in person?</h2>
+        <p class="sub">Tell me which home or building you're curious about. I'll answer questions, pull the building's records, and set up a showing with the listing agent.</p>
+      </div>
+      <div class="ways">
+        <a class="way" href="https://docs.google.com/forms/d/e/1FAIpQLSdTUIwvkFX3ZGQtK6vvTvmGLRzBEuMMdriankDuO40ZzSr-lw/viewform?usp=pp_url&amp;entry.352884469=Website" target="_blank" rel="noopener"><span><b>Send me a message</b><span>A short form, I reply the same day</span></span><em>Open form</em></a>
+        <a class="way" href="https://www.instagram.com/tonyboothrealtor/" target="_blank" rel="noopener"><span><b>Instagram</b><span>@tonyboothrealtor</span></span><em>DM me</em></a>
+        <a class="way" href="mailto:tonyboothmiami@gmail.com"><span><b>Email</b><span>tonyboothmiami@gmail.com</span></span><em>Write</em></a>
+        <p class="note">Before a private showing you'll sign a short buyer agreement, which MLS rules require. Broker fees are not set by law and are fully negotiable.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Tony Booth, Florida licensed real estate sales associate, Big International Realty.</strong> License SL3654103. 400 Sunny Isles Blvd, CU-1, Sunny Isles Beach, FL 33160.</p>
+    <p id="mls"></p>
+    <p>Equal Housing Opportunity. Not legal, inspection or lending advice.</p>
+  </div>
+</footer>
+
+<script>
+const HOMES = [{"building": "The Setai", "unit": "2902", "address": "101 20th St, Miami Beach", "price": 3100000, "sqft": 1213, "beds": 2, "baths": 2, "hood": "Miami Beach", "built": 2004, "floor": "29th", "agent": "Giorgio Giliberti", "brokerage": "Compass", "asOf": "2026-11-20", "comp": 2489, "tags": ["Direct ocean view", "Vacant", "Hotel services"], "tour": "https://portal.onehome.com/en-US/share/4958037H12430", "photoCount": 22, "photos": ["setai-0.jpg", "setai-1.jpg", "setai-2.jpg", "setai-3.jpg", "setai-4.jpg", "setai-5.jpg", "setai-6.jpg", "setai-7.jpg"]}, {"building": "Kai at Bay Harbor", "unit": "7B-N", "address": "9940 W Bay Harbor Dr, Bay Harbor Islands", "price": 975000, "sqft": 1335, "beds": 2, "bedNote": "2 bed + den", "baths": 3, "hood": "Bay Harbor Islands", "built": 2016, "floor": "Top floor", "hoa": 1998, "agent": "Kai Chen", "brokerage": "COSMORE Florida Corp", "asOf": "2026-11-20", "comp": 859, "tags": ["No neighbors above", "Rooftop pool and boat dock", "Walk to Bal Harbour Shops"], "tour": "https://portal.onehome.com/en-US/share/4939044c00346", "photoCount": 53, "photos": ["kai-0.jpg", "kai-1.jpg", "kai-2.jpg", "kai-3.jpg", "kai-4.jpg", "kai-5.jpg", "kai-6.jpg", "kai-7.jpg"]}, {"building": "St. Tropez on the Bay", "unit": "TH-407", "address": "250 NE Sunny Isles Blvd, Sunny Isles Beach", "price": 979000, "sqft": 1648, "beds": 3, "bedNote": "3 bed townhouse", "baths": 2, "hood": "Sunny Isles Beach", "agent": "Emanuelle Freeborn", "brokerage": "Pacific Luxury Homes", "asOf": "2026-11-20", "tags": ["Townhouse with its own entry", "Furnished", "Vacant"], "photos": ["emanuelle-0.jpg", "emanuelle-1.jpg", "emanuelle-2.jpg", "emanuelle-3.jpg", "emanuelle-4.jpg", "emanuelle-5.jpg", "emanuelle-6.jpg", "emanuelle-7.jpg"]}, {"building": "St. Tropez on the Bay II", "unit": "2-806", "address": "200 Sunny Isles Blvd, Sunny Isles Beach", "price": 839000, "sqft": 1492, "beds": 3, "baths": 2, "hood": "Sunny Isles Beach", "agent": "Lisa Halprin", "brokerage": "Halprin Realty", "asOf": "2026-11-20", "tags": ["Furnished", "Long balcony over the water"], "photos": ["lisa-0.jpg", "lisa-1.jpg", "lisa-2.jpg", "lisa-3.jpg", "lisa-4.jpg", "lisa-5.jpg", "lisa-7.jpg"]}, {"building": "St. Tropez", "unit": "1-1203", "address": "150 Sunny Isles Blvd, Sunny Isles Beach", "price": 794000, "sqft": 1458, "beds": 3, "baths": 2, "hood": "Sunny Isles Beach", "built": 2009, "floor": "12th", "hoa": 1863, "agent": "Ciro Noccioli Monteiro Alves", "brokerage": "LPT Realty", "asOf": "2026-11-20", "comp": 584, "tags": ["Ocean and Intracoastal views", "Vacant and furnished", "Short walk to the beach"], "tour": "https://portal.onehome.com/en-US/share/4946908C44879", "photoCount": 40, "photos": ["ciro-0.jpg", "ciro-1.jpg", "ciro-2.jpg", "ciro-3.jpg", "ciro-4.jpg", "ciro-5.jpg", "ciro-6.jpg", "ciro-7.jpg"]}];
+const FILES = [{"slug": "epic-residences", "name": "Epic Residences", "address": "200 Biscayne Boulevard Way, Miami, FL 33131", "hood": "Downtown", "folio": "01-4206-068", "built": 2008, "units": 342, "smin": 799, "smax": 4310, "sales": 33, "med": 1150000, "ppsf": 747, "first": "2025-02", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "EPIC WEST CONDOMINIUM ASSOCIATION, INC."}, {"slug": "900-biscayne-bay", "name": "900 Biscayne Bay", "address": "900 Biscayne Blvd, Miami, FL 33132", "hood": "Downtown", "folio": "01-3231-069", "built": 2008, "units": 508, "smin": 912, "smax": 3654, "sales": 33, "med": 780000, "ppsf": 713, "first": "2025-01", "last": "2026-04", "sirs": "none_found", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "900 BISCAYNE BAY CONDOMINIUM ASSOCIATION, INC."}, {"slug": "paramount-miami-worldcenter", "name": "Paramount Miami Worldcenter", "address": "851 NE 1st Ave, Miami, FL 33132", "hood": "Downtown", "folio": "01-3137-039", "built": 2019, "units": 567, "smin": 528, "smax": 6212, "sales": 39, "med": 990000, "ppsf": 626, "first": "2025-01", "last": "2026-03", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "PARAMOUNT MIAMI WORLDCENTER CONDOMINIUM ASSOCIATION, INC."}, {"slug": "paramount-bay", "name": "Paramount Bay", "address": "2020 N Bayshore Dr, Miami, FL 33137", "hood": "Edgewater", "folio": "01-3230-089", "built": 2010, "units": 344, "smin": 1128, "smax": 4055, "sales": 31, "med": 1495000, "ppsf": 890, "first": "2025-01", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "PARAMOUNT BAY CONDOMINIUM OWNERS ASSOCIATION, INC."}, {"slug": "aria-on-the-bay", "name": "Aria on the Bay", "address": "488 NE 18th St, Miami, FL 33132", "hood": "Edgewater", "folio": "01-3231-076", "built": 2018, "units": 647, "smin": 706, "smax": 4238, "sales": 39, "med": 740000, "ppsf": 700, "first": "2025-02", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "ARIA ON THE BAY CONDOMINIUM ASSOCIATION, INC."}, {"slug": "one-paraiso", "name": "One Paraiso", "address": "3131 NE 7th Ave, Miami, FL 33137", "hood": "Edgewater", "folio": "01-3230-095", "built": 2018, "units": 273, "smin": 959, "smax": 3297, "sales": 30, "med": 1462500, "ppsf": 984, "first": "2025-01", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "ONE PARAISO CONDOMINIUM ASSOCIATION, INC."}, {"slug": "reach-brickell-city-centre", "name": "Reach at Brickell City Centre", "address": "68 SE 6th St, Miami, FL 33131", "hood": "Brickell", "folio": "01-4138-167", "built": 2016, "units": 390, "smin": 810, "smax": 4105, "sales": 30, "med": 937500, "ppsf": 756, "first": "2025-01", "last": "2026-04", "sirs": "none_found", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "REACH CONDOMINIUM ASSOCIATION INC."}, {"slug": "villa-regina", "name": "Villa Regina", "address": "1581 Brickell Ave, Miami, FL 33129", "hood": "Brickell", "folio": "01-4139-041", "built": 1982, "units": 200, "smin": 717, "smax": 7280, "sales": 20, "med": 975000, "ppsf": 550, "first": "2025-03", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "VILLA REGINA ASSOCIATION, INC."}, {"slug": "the-palace", "name": "The Palace", "address": "1541 Brickell Ave, Miami, FL 33129", "hood": "Brickell", "folio": "01-4139-038", "built": 1981, "units": 248, "smin": 974, "smax": 5801, "sales": 19, "med": 850000, "ppsf": 518, "first": "2025-01", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Expired", "reg_exp": "2026-01-31", "assoc": "THE PALACE CONDOMINIUM ASSOCIATION INC."}, {"slug": "two-tequesta-point", "name": "Two Tequesta Point", "address": "808 Brickell Key Dr, Miami, FL 33131", "hood": "Brickell", "folio": "01-4206-059", "built": 1998, "units": 267, "smin": 907, "smax": 5097, "sales": 10, "med": 1160000, "ppsf": 739, "first": "2025-02", "last": "2026-04", "sirs": "verified", "sirs_checked": "2026-10-22", "reg": "Issued", "reg_exp": "2027-01-31", "assoc": "TWO TEQUESTA POINT CONDOMINIUM ASSOCIATION, INC."}];
+const FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdTUIwvkFX3ZGQtK6vvTvmGLRzBEuMMdriankDuO40ZzSr-lw/viewform";
+const $ = s => document.querySelector(s);
+const money = n => "$" + Number(n).toLocaleString("en-US");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ask = name => FORM + "?usp=pp_url&entry.352884469=" + encodeURIComponent("Website: " + name);
+const longDate = iso => { const [y,m,d] = iso.split("-").map(Number); return new Date(y,m-1,d).toLocaleString("en-US",{month:"long",day:"numeric",year:"numeric"}); };
+
+function value(h){
+  if(!h.comp) return "";
+  const a = Math.round(h.price / h.sqft), c = h.comp, max = Math.max(a, c) * 1.08;
+  const d = Math.round((a - c) / c * 100);
+  const badge = d <= -3 ? `<span class="badge">${-d}% below the building</span>` : "";
+  return `<div class="value">
+    <div class="head"><b>Price per square foot</b>${badge}</div>
+    <div class="row ask"><span>This home</span><span class="track"><i style="width:${(a/max*100).toFixed(1)}%"></i></span><b class="num">${money(a)}</b></div>
+    <div class="row"><span>Building's sales</span><span class="track"><i style="width:${(c/max*100).toFixed(1)}%"></i></span><b class="num">${money(c)}</b></div>
+    <p>Building figure: recent closed sales in the same tower.</p>
+  </div>`;
+}
+
+function home(h, i){
+  const id = "h" + i, name = h.building + " #" + h.unit;
+  const beds = h.bedNote || (h.beds + " bed");
+  const more = [["Area", h.hood], h.built ? ["Built", h.built] : null, h.floor ? ["Floor", h.floor] : null, h.hoa ? ["HOA", money(h.hoa) + " a month"] : null].filter(Boolean);
+  return `<article class="home" data-area="${esc(h.hood)}" aria-labelledby="${id}-n">
+    <div class="gallery">
+      <div class="frame">
+      <div class="strip" id="${id}-s" tabindex="0" aria-label="Photos of ${esc(name)}">
+        ${h.photos.map((p, j) => `<img src="${esc(p)}" alt="${esc(name)}, photo ${j+1} of ${h.photos.length}" ${j ? 'loading="lazy"' : (i ? 'loading="lazy"' : "")} width="1100" height="733">`).join("")}
+      </div>
+      <button class="nav prev" type="button" aria-label="Previous photo" data-s="${id}" data-d="-1">‹</button>
+      <button class="nav next" type="button" aria-label="Next photo" data-s="${id}" data-d="1">›</button>
+      <span class="count num" id="${id}-c" aria-hidden="true">1 / ${h.photos.length}</span>
+      </div>
+      <div class="thumbs" role="group" aria-label="Choose a photo">
+        ${h.photos.map((p, j) => `<button type="button" data-s="${id}" data-j="${j}" aria-label="Photo ${j+1}" ${j ? "" : 'aria-current="true"'}><img src="${esc(p)}" alt="" loading="lazy"></button>`).join("")}
+      </div>
+    </div>
+    <div class="facts">
+      <span class="where">${esc(h.address)}</span>
+      <span class="price num">${money(h.price)}</span>
+      <span class="name" id="${id}-n">${esc(name)}</span>
+      <div class="spec num">
+        <div><b>${esc(beds.split(" ")[0])}</b><span>${esc(beds.split(" ").slice(1).join(" ") || "bed")}</span></div>
+        <div><b>${h.baths}</b><span>bath</span></div>
+        <div><b>${Number(h.sqft).toLocaleString("en-US")}</b><span>sq ft</span></div>
+      </div>
+      <dl class="more">${more.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
+      ${value(h)}
+      <ul class="tags">${h.tags.map(t => `<li>${esc(t)}</li>`).join("")}</ul>
+      <div class="do">
+        <a class="btn solid" href="${ask(name)}" target="_blank" rel="noopener">Ask about this home</a>
+        ${h.tour ? `<a class="btn quiet" href="${esc(h.tour)}" target="_blank" rel="noopener">All ${h.photoCount} photos</a>` : ""}
+      </div>
+      <p class="credit">Listing courtesy of ${esc(h.agent)}, ${esc(h.brokerage)}. Tony Booth is not the listing agent and can represent you as the buyer.</p>
+    </div>
+  </article>`;
+}
+
+$("#list").innerHTML = HOMES.map(home).join("");
+
+/* photo strips: count, arrows, thumbnails */
+document.querySelectorAll(".strip").forEach(s => {
+  const id = s.id.slice(0, -2), n = s.children.length;
+  const thumbs = s.parentElement.querySelectorAll(".thumbs button");
+  s.addEventListener("scroll", () => {
+    const k = Math.round(s.scrollLeft / s.clientWidth);
+    $("#" + id + "-c").textContent = (k + 1) + " / " + n;
+    thumbs.forEach((t, j) => t.setAttribute("aria-current", j === k));
+  }, {passive: true});
+});
+const go = (id, k) => { const s = $("#" + id + "-s"); const n = s.children.length; k = (k + n) % n; s.scrollTo({left: k * s.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); };
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-s]"); if (!b) return;
+  const s = $("#" + b.dataset.s + "-s");
+  if (b.dataset.j != null) go(b.dataset.s, Number(b.dataset.j));
+  else go(b.dataset.s, Math.round(s.scrollLeft / s.clientWidth) + Number(b.dataset.d));
+});
+document.querySelectorAll(".strip").forEach(s => s.addEventListener("keydown", e => {
+  if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return; e.preventDefault();
+  go(s.id.slice(0, -2), Math.round(s.scrollLeft / s.clientWidth) + (e.key === "ArrowRight" ? 1 : -1));
+}));
+
+/* area filter */
+const areas = ["All", ...new Set(HOMES.map(h => h.hood))];
+$("#chips").innerHTML = areas.map((a, i) => `<button class="chip" type="button" data-a="${esc(a)}" aria-pressed="${i === 0}">${esc(a === "All" ? "All homes" : a)}<span class="num">${a === "All" ? HOMES.length : HOMES.filter(h => h.hood === a).length}</span></button>`).join("");
+$("#chips").addEventListener("click", e => {
+  const c = e.target.closest(".chip"); if (!c) return;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+  document.querySelectorAll(".home").forEach(h => h.hidden = !(c.dataset.a === "All" || h.dataset.area === c.dataset.a));
+});
+
+/* building table */
+let sortK = "ppsf", asc = true;
+function table(){
+  const rows = [...FILES].sort((a, b) => (typeof a[sortK] === "string" ? a[sortK].localeCompare(b[sortK]) : a[sortK] - b[sortK]) * (asc ? 1 : -1));
+  $("#btable").innerHTML = rows.map(f => `<tr>
+    <td><b>${esc(f.name)}</b><small>${esc(f.hood)}</small></td>
+    <td class="r num"><b>${money(f.ppsf)}</b><small>per sq ft</small></td>
+    <td class="r num hide-s">${money(f.med)}</td>
+    <td class="r num hide-s">${f.built}</td>
+    <td class="r num hide-s">${f.sales}</td></tr>`).join("");
+  document.querySelectorAll("th").forEach(th => { const b = th.querySelector("button"); if (b.dataset.k === sortK) th.setAttribute("aria-sort", asc ? "ascending" : "descending"); else th.removeAttribute("aria-sort"); });
+}
+document.querySelectorAll("th button").forEach(b => b.addEventListener("click", () => { if (sortK === b.dataset.k) asc = !asc; else { sortK = b.dataset.k; asc = b.dataset.k === "name" || b.dataset.k === "ppsf"; } table(); }));
+table();
+
+const asOf = HOMES.map(h => h.asOf).sort().pop();
+$("#mls").textContent = "Home listings from the Miami MLS as of " + longDate(asOf) + ", shown with each listing agent's permission and credited to their brokerage. Believed accurate but not guaranteed; prices and availability can change. Photos belong to the listing brokerages.";
+</script>
+</body>
+</html>
